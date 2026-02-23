@@ -258,15 +258,15 @@ class ViewTables(Resource):
         })
  
 # ================= ROUTES =================
-api.add_resource(AddMenuItem, "/add_menu")
-api.add_resource(ViewMenu, "/menu")
+api.add_resource(AddMenuItem, "/add_menu")  #POST - http://127.0.0.1:5003/add_menu
+api.add_resource(ViewMenu, "/menu") #GET - http://127.0.0.1:5003/menu
  
-api.add_resource(PlaceOrder, "/place_order")
-api.add_resource(ViewOrders, "/orders")
+api.add_resource(PlaceOrder, "/place_order") #POST - http://127.0.0.1:5003/place_order
+api.add_resource(ViewOrders, "/orders") #GET - http://127.0.0.1:5003/orders
  
-api.add_resource(AddTable, "/add_table")
-api.add_resource(ReserveTable, "/reserve_table")
-api.add_resource(ViewTables, "/tables")
+api.add_resource(AddTable, "/add_table") #POST - http://127.0.0.1:5003/add_table
+api.add_resource(ReserveTable, "/reserve_table") #POST - http://127.0.0.1:5003/reserve_table
+api.add_resource(ViewTables, "/tables") #GET - http://127.0.0.1:5003/tables
  
 @app.route('/')
 def home():
