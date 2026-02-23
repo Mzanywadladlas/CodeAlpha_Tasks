@@ -117,8 +117,8 @@ class RedirectURL(Resource):
         return redirect(row["original_url"])
  
 # ================= ROUTES =================
-api.add_resource(Shorten, "/shorten")
-api.add_resource(RedirectURL, "/<string:code>")
+api.add_resource(Shorten, "/shorten") #POST - http://127.0.0.1:5001/shorten
+api.add_resource(RedirectURL, "/<string:code>") #GET - http://127.0.0.1:5001/"/<string:code>"
  
 @app.route('/')
 def home():
